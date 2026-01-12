@@ -46,5 +46,5 @@ app.get("/history", (req, res) => {
   res.sendFile(path.join(__dirname, "src/public/history.html"));
 });
 app.listen(PORT, () => {
-  console.log(`Server chạy tại: http://localhost:${PORT}`);
+  console.log(`Server chạy tại: ${PORT}`);
 });
