@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch sử đo đạc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="charts.html" class="nav-link"><i class="fas fa-chart-line"></i> Biểu đồ</a>
+        <a href="history.html" class="nav-link active"><i class="fas fa-history"></i> Lịch sử</a>
+    </nav>
+
+    <div class="container">
+        <div class="history-section" style="margin-top: 20px;">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                <h2><i class="fas fa-list-ul"></i> Nhật Ký Dữ Liệu</h2>
+                <div class="chart-filters">
+                    <button class="btn-filter active" onclick="filterTable('all', this)">Tất cả</button>
+                    <button class="btn-filter" onclick="filterTable('soil', this)">Đất</button>
+                    <button class="btn-filter" onclick="filterTable('temp', this)">Nhiệt</button>
+                    <button class="btn-filter" onclick="filterTable('hum', this)">KK</button>
+                </div>
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th><i class="far fa-clock"></i> Thời gian</th>
+                        <th>Loại cảm biến</th>
+                        <th>Giá trị đo</th>
+                    </tr>
+                </thead>
+                <tbody id="sensor-table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
