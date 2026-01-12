@@ -47,4 +47,5 @@ app.get("/history", (req, res) => {
 });
 app.listen(PORT, () => {
   console.log(`Server chạy tại: ${PORT}`);
+  // console.log(`Server is running on http://localhost:${PORT}`);
 });
